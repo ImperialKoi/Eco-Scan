@@ -3,7 +3,6 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import image from '../assets/AppIcon.png';
 
 interface NavbarProps {
   children?: ReactNode;
@@ -269,7 +268,7 @@ const NavbarLogo = () => {
       href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal hover:scale-110"
     >
-      <img src={image} alt="logo" className='w-6 h-6'/>
+      <img src={'https://eco-scan-git-main-imperialkois-projects.vercel.app/AppIcon.png'} alt="logo" className='w-6 h-6'/>
       <h1 className="text-2xl font-bold text-white">EcoScan</h1>
     </a>
   );
