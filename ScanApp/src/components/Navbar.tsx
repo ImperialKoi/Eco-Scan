@@ -1,7 +1,7 @@
 import { useState, useRef, ReactNode, ElementType, ComponentPropsWithoutRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import image from '../assets/AppIcon.png';
 
