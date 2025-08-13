@@ -1,5 +1,5 @@
 import { useState, useRef, ReactNode, ElementType, ComponentPropsWithoutRef } from "react";
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
@@ -78,7 +78,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <NavBody visible={visible}>
           <NavbarLogo />
-          <NavItems items={navItems} className="text-slate-700" />
+          <NavItems items={navItems} className="text-white" />
           <NavbarButton variant="primary" href="#contact" className="ml-4">
             Get Started
           </NavbarButton>
@@ -98,7 +98,7 @@ const Navbar = () => {
               <a 
                 key={`mobile-${idx}`}
                 href={item.link} 
-                className="w-full text-slate-700 hover:text-blue-600 py-3 text-lg"
+                className="w-full text-white hover:text-white py-3 text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -164,14 +164,14 @@ const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-slate-700"
+          className="relative px-4 py-2 text-white"
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100"
+              className="absolute inset-0 h-full w-full rounded-full bg-green-800"
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -257,9 +257,9 @@ const MobileNavToggle = ({
   onClick: () => void;
 }) => {
   return isOpen ? (
-    <X className="text-slate-700" onClick={onClick} />
+    <X className="text-white" onClick={onClick} />
   ) : (
-    <Menu className="text-slate-700" onClick={onClick} />
+    <Menu className="text-white" onClick={onClick} />
   );
 };
 
@@ -270,7 +270,7 @@ const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal hover:scale-110"
     >
       <img src={image} alt="logo" className='w-6 h-6'/>
-      <h1 className="text-2xl font-bold text-blue-600">EcoScan</h1>
+      <h1 className="text-2xl font-bold text-white">EcoScan</h1>
     </a>
   );
 };
